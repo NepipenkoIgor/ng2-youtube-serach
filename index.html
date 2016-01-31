@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Firs-app</title>
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+
+    <script src="node_modules/es6-shim/es6-shim.js"></script>
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.js"></script>
+
+    <link rel="stylesheet" href="styles/youtubesearch.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+<script>
+    System.config({
+        transpiler: 'typescript',
+        map: {
+            typescript:'//cdn.rawgit.com/Microsoft/TypeScript/v1.6.2/lib/typescript.js',
+            YouTubeService: 'YouTubeService.ts',
+            YouTubeDisplayComponent:'YouTubeDisplayComponent.ts',
+            YouTubeSearchBoxComponent:'YouTubeSearchBoxComponent.ts'
+        },
+        packages: {
+            app: {
+                format: 'register',
+                defaultExtension: 'js',
+            } }
+    });
+    System.import('YouTubeSearchComponent.ts')
+            .then(null, console.error.bind(console));
+</script>
+<youtube-search></youtube-search>
+</body>
+</html>
