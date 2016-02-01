@@ -37,7 +37,7 @@ export class YouTubeService {
 
     search(query:string):Observable<SearchResult[]> {
         let params:string = [
-            `q=${query}`, `key=${this.apiKey}`, `part=snippet`, `type=video`, `maxResults=10`
+            `q=${query}`, `key=${this.apiKey}`, `part=snippet`, `type=video`, `maxResults=50`
         ].join('&');
         let queryUrl:string = `${this.apiUrl}?${params}`;
         return this.http.get(queryUrl)

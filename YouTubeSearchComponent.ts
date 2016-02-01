@@ -29,7 +29,7 @@ style="float: right;" *ngIf="loading" src='${loadingGif}' />
             ></search-box>
  </div>
      </div>
-<div class="row"> <search-result
+<div class="row-content"> <search-result
           *ngFor="#result of results"
 [result]="result"> </search-result>
      </div>
