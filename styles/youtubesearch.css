@@ -32,6 +32,14 @@ body{
 .row-content{
     -webkit-columns: 3;
     -webkit-column-gap:1em;
+    -o-columns: 3;
+    -o-column-gap:1em;
+    -moz-columns: 3;
+    -moz-column-gap:1em;
+    -ms-columns: 3;
+    -ms-column-gap:1em;
+    columns: 3;
+    column-gap:1em;
 }
 
 search-result{
